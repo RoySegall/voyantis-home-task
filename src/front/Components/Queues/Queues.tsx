@@ -1,6 +1,17 @@
 import "./queus.css";
+import {useEffect, useState} from "react";
 
 export function Queues() {
+    const [queues, setQueues] = useState([]);
+    useEffect(() => {
+
+        fetch('http://localhost:3000/api/queues')
+            .then(response => response.json())
+            .then(data => {
+                setQueues(data.queues);
+            });
+    }, []);
+
     return <div id='queues'>
         <table>
             <thead>
@@ -12,22 +23,13 @@ export function Queues() {
             </thead>
 
             <tbody>
-                <tr>
-                    <td>queue1</td>
+            {queues.map(queue => <><tr>
+                    <td>{queue}</td>
                     <td>0</td>
                     <td>
-                        <button>Send message</button>
-                        <button>Delete</button>
+                        View messages
                     </td>
-                </tr>
-                <tr>
-                    <td>queue2</td>
-                    <td>0</td>
-                    <td>
-                        <button>Send message</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
+                </tr></>)}
             </tbody>
         </table>
     </div>

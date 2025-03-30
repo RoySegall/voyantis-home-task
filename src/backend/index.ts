@@ -1,7 +1,10 @@
 import express from 'express';
+import cors from 'cors';
 
 const app = express();
 const port = 3000;
+
+app.use(cors('*'));
 
 const queues: Record<string, { messages: any[], waiters: any[] }> = {};
 
@@ -25,6 +28,12 @@ app.post('/api/:queue_name', (req, res) => {
     }
 
     res.status(200).json({ success: true });
+});
+
+
+app.get('/api/queues', (req, res) => {
+    // todo: get the amount of messages.
+    res.status(200).json({queues: Object.keys(queues)});
 });
 
 app.get('/api/:queue_name', async (req, res) => {
@@ -56,10 +65,6 @@ app.get('/api/:queue_name', async (req, res) => {
     } else {
         res.status(204).end();
     }
-});
-
-app.get('/', (_req, res) => {
-    res.json({message: 'hello'})
 });
 
 app.listen(port, () => {

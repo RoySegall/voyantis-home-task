@@ -20,3 +20,8 @@
     border-radius: 5px;
     width: 50%;
 }
+
+#dialog .footer {
+    display: flex;
+    gap: 5px;
+}
