@@ -1,8 +1,13 @@
 import './App.css'
+import {CreateMessage} from "./Components/CreateMessage";
+import {Queues} from "./Components/Queues";
 
 function App() {
     return <div id='app'>
-        asasd
+        <div className='container'>
+            <CreateMessage />
+            <Queues />
+        </div>
     </div>
 }
 

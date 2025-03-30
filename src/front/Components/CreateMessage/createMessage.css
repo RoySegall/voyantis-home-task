@@ -1,0 +1,22 @@
+#create-message button {
+    background: var(--button-background);
+    border: solid 1px var(--button-background);
+    color: var(--button-text);
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 1em 2em;
+    transition: background-color .5s ease;
+}
+
+#create-message button:hover {
+    background: transparent;
+    color: var(--button-background);
+    border: solid 1px var(--button-background);
+    cursor: pointer;
+}
+
+#dialog {
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 50%;
+}

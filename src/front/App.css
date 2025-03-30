@@ -1,21 +1,31 @@
 #root {
-  --background: #E8E6E4FF;
-  --white: #f4f4f5;
-  --text: #023245;
+    --background: #E8E6E4FF;
+    --white: #f4f4f5;
+    --text: #023245;
 
-  --pink: #f40a6a;
-  --pink-secondary: #f40a5b;
-  --button-background: #023245;
-  --button-text: #f4f4f5;
+    --pink: #f40a6a;
+    --pink-secondary: #f40a5b;
+    --button-background: #023245;
+    --button-text: #f4f4f5;
+}
+
+* {
+    font-family: "DM Sans", sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: "DM Sans", sans-serif;
+    margin: 0;
 }
 
 #app {
-  background: var(--background);
-  height: 100vh;
-  padding: 1em;
+    background: var(--background);
+    height: 100vh;
+    padding: 1em;
 }
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+

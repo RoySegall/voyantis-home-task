@@ -1,0 +1,36 @@
+#queues {
+    padding-top: 1em;
+}
+
+#queues table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#queues table thead {
+    background: white;
+}
+
+#queues table thead th {
+    padding: .5em;
+    border-bottom: solid 1px var(--pink);
+}
+
+#queues table thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+#queues table thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+#queues table tbody tr td {
+    padding: .5em;
+    font-weight: 300;
+}
+
+#queues table tbody tr:nth-child(even) td {
+    background: var(--pink-secondary);
+    color: var(--white);
+}
